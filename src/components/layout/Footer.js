@@ -1,0 +1,18 @@
+import { Typography } from '@mui/material'
+import React from 'react'
+
+function Footer() {
+  return (
+    <footer>
+        <Typography component='p' variant='p'
+         bgcolor='#f7f7f7' color='primary'
+         padding='10px' mt={10}
+         textAlign='center'
+         >
+            پروژه وبلاگ با GraphQl
+        </Typography>
+    </footer>
+  )
+}
+
+export default Footer

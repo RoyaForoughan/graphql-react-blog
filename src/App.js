@@ -1,13 +1,15 @@
 
-import './App.css';
+import HomePage from './components/home/HomePage';
+import Layout from './components/layout/Index';
+
+
 
 
 function App() {
-
   return (
-    <h1>
-      App
-    </h1>
+    <Layout>
+    <HomePage/>
+    </Layout>
   );
 }
 
