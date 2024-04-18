@@ -5,11 +5,11 @@ import { Grid } from '@mui/material'
 import CardEL from '../shared/CardEL'
 
 function Blogs() {
-  const {loading , data , erros} = useQuery(GET_BLOGS_INFO)
+  const {loading , data , errors} = useQuery(GET_BLOGS_INFO)
 
   if(loading) return <h4>Loading...</h4>
 
-  if(erros) return <h4>Error...</h4>
+  if(errors) return <h4>Error...</h4>
   console.log(data)
   return (
     <Grid container spacing={2}>
