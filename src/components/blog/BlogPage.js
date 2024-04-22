@@ -8,6 +8,7 @@ import {Container} from '@mui/system'
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import sanitizeHtml from 'sanitize-html'
 import CommentForm from '../comment/CommentForm'
+import Comments from '../comment/Comments'
 
 function BlogPage() {
   const {slug} = useParams()
@@ -20,7 +21,7 @@ function BlogPage() {
   if(loading) return <Loader/>
 
   if(errors) return <h3>Error...</h3>
-  console.log(data)
+  console.log({loading , data , errors})
   return (
     <Container maxWidth='lg'>
       <Grid container>
@@ -53,6 +54,9 @@ function BlogPage() {
         </Grid>
         <Grid item xs={12}>
           <CommentForm slug={slug}/>
+        </Grid>
+        <Grid item xs={12}>
+          <Comments slug={slug}/>
         </Grid>
       </Grid>
     </Container>

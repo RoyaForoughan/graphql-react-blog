@@ -13,6 +13,7 @@ function CommentForm({slug}) {
         variables : {name , email , text , slug}
     })
 
+    console.log({loading , data , errors})
     const sendHandler = () => {
         if(name && email && text) {
             sendComment()
@@ -24,7 +25,6 @@ function CommentForm({slug}) {
     }
 
 
-    console.log({loading , data , errors})
 
     if(data){
         toast.success('کامنت ارسال شد و منتظر تایید می باشد' , {
